@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homePage {
+    width: 30vw;
+    height: 100vh;
+    position: relative;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.bgVideo {
+    height: 100vh;
+    scroll-snap-align: center;
+}
+
+.img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* nav */
+.nav {
+    width: 30vw;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+}
+
+.navItems {
+    display: flex;
+    justify-content: center;
+    flex: 10;
+}
+
+.navItem {
+    margin-left: 40px;
+    cursor: pointer;
+    position: relative;
+}
+
+.navItem.active::after {
+    content: "";
+    width: 35px;
+    height: 4px;
+    border-radius: 5px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.search {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Right Sidebar */
+.rightSidebar {
+    height: 45vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    bottom: 20vh;
+    color: white;
+    padding: 0 10px;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.sidebarIcon {
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.iconContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebarContainer,
+.profileContainer {
+    position: relative;
+}
+
+.profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.fa-circle-plus {
+    position: absolute;
+    left: 11px;
+    bottom: 6px;
+    color: red;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.fa-compact-disc {
+    color: black;
+    font-size: 2.7rem;
+}
+
+.total {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.circle {
+    position: absolute;
+    left: 7px;
+    top: 7px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Video Detial */
+
+.videoDetail {
+    width: 80%;
+    position: absolute;
+    bottom: calc(100vh - 93vh + -2px);
+    color: white;
+    padding: 10px;
+}
+
+.userName {
+    font-weight: bold;
+}
+
+.fa-music {
+    font-size: 14px;
+}
+
+.song {
+    font-weight: bold;
+}
+
+.musicTime {
+    position: absolute;
+    left: 0;
+    width: 30vw;
+    height: 2px;
+    background-color: antiquewhite;
+}
+
+/* footer */
+
+.footerContainer {
+    width: 100%;
+    height: 8vh;
+    padding: 0px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    font-size: 1.3rem;
+    color: white;
+}
+
+.footerIconContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerIcon {
+    cursor: pointer;
+}
+
+.footerIcon.active {
+    color: yellow;
+}
+
+.fa-square-plus {
+    font-size: 2.1rem;
+}
+
+.text {
+    font-size: 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .homePage {
+        width: 35vw;
+    }
+
+    .nav {
+        width: 35vw;
+    }
+
+    .musicTime {
+        width: 35vw;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .homePage {
+        width: 40vw;
+    }
+
+    .nav {
+        width: 40vw;
+    }
+
+    .musicTime {
+        width: 40vw;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .homePage {
+        width: 50vw;
+    }
+
+    .nav {
+        width: 50vw;
+    }
+
+    .musicTime {
+        width: 50vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .homePage {
+        width: 60vw;
+    }
+
+    .nav {
+        width: 60vw;
+    }
+
+    .musicTime {
+        width: 60vw;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .homePage {
+        width: 100vw;
+    }
+
+    .nav {
+        width: 100vw;
+    }
+
+    .musicTime {
+        width: 100vw;
+    }
+}
